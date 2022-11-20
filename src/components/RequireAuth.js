@@ -10,7 +10,7 @@ export default function RequireAuth(props) {
         if (store.loggedIn === null) {
             store.checkAuth();
         }
-    }, []);
+    }, [store]);
 
     if (store.loggedIn === null) {
         return <h1>Loading...</h1>;

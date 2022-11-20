@@ -58,7 +58,7 @@ const authStore = create((set) => ({
 
     checkAuth: async () => {
         try {
-            const res = await axios.get("/check-auth");
+            await axios.get("/check-auth");
             set({loggedIn: true});
         } catch (err) {
             set({loggedIn: false});
@@ -68,7 +68,7 @@ const authStore = create((set) => ({
     signup: async (e) => {
         const {signupForm} = authStore.getState();
 
-        const res = await axios.post("/signup", signupForm);
+        await axios.post("/signup", signupForm);
 
         set({
             signupForm: {

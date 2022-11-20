@@ -10,7 +10,7 @@ export default function PropsPage() {
     // Use effect
     useEffect(() => {
     store.fetchProps();
-    }, []);
+    }, [store]);
 
     return (
         <div>      
